@@ -1,56 +1,35 @@
-package com.thealgorithms.misc;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
-import java.util.Scanner;
+public class SparseTest {
 
-/*
- *A matrix is sparse if many of its coefficients are zero (In general if 2/3rd of matrix elements
- *are 0, it is considered as sparse). The interest in sparsity arises because its exploitation can
- *lead to enormous computational savings and because many large matrix problems that occur in
- *practice are sparse.
- *
- * @author Ojasva Jain
- */
+    @Test
+    public void testSparsity() {
+        // Test case 1: 2x2 matrix with 2 zeroes
+        int[][] mat1 = {
+            {0, 1},
+            {2, 0}
+        };
+        int zeroCount1 = 2;
+        double expectedSparsity1 = 0.5;
+        assertEquals(expectedSparsity1, Sparse.sparsity(mat1, 2, 2, zeroCount1), 0.0001);
 
-final class Sparsity {
-    private Sparsity() {
-    }
+        // Test case 2: 3x3 matrix with 5 zeroes
+        int[][] mat2 = {
+            {0, 1, 0},
+            {2, 0, 3},
+            {0, 0, 0}
+        };
+        int zeroCount2 = 5;
+        double expectedSparsity2 = 5.0 / 9.0;
+        assertEquals(expectedSparsity2, Sparse.sparsity(mat2, 3, 3, zeroCount2), 0.0001);
 
-    /*
-     * @return Sparsity of matrix
-     *
-     * where sparsity = number of zeroes/total elements in matrix
-     *
-     */
-    static double sparsity(double[][] mat) {
-        int zero = 0;
-        // Traversing the matrix to count number of zeroes
-        for (int i = 0; i < mat.length; i++) {
-            for (int j = 0; j < mat[i].length; j++) {
-                if (mat[i][j] == 0) {
-                    zero++;
-                }
-            }
-        }
-        // return sparsity
-        return ((double) zero / (mat.length * mat[1].length));
-    }
-
-    // Driver method
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter number of rows in matrix: ");
-        int n = in.nextInt();
-        System.out.println("Enter number of Columns in matrix: ");
-        int m = in.nextInt();
-
-        System.out.println("Enter Matrix elements: ");
-        double[][] mat = new double[n][m];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                mat[i][j] = in.nextDouble();
-            }
-        }
-        System.out.println("Sparsity of matrix is: " + sparsity(mat));
-        in.close();
+        // Test case 3: 1x1 matrix with no zeroes
+        int[][] mat3 = {
+            {5}
+        };
+        int zeroCount3 = 0;
+        double expectedSparsity3 = 0.0;
+        assertEquals(expectedSparsity3, Sparse.sparsity(mat3, 1, 1, zeroCount3), 0.0001);
     }
 }
