@@ -320,6 +320,7 @@
             * [JobSequencing](https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/greedyalgorithms/JobSequencing.java)
             * [MergeIntervals](https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/greedyalgorithms/MergeIntervals.java)
             * [MinimizingLateness](https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/greedyalgorithms/MinimizingLateness.java)
+            * [OptimalFileMerging](https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/greedyalgorithms/OptimalFileMerging.java)
           * io
             * [BufferedReader](https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/io/BufferedReader.java)
           * lineclipping
@@ -920,6 +921,7 @@
             * [JobSequencingTest](https://github.com/TheAlgorithms/Java/blob/master/src/test/java/com/thealgorithms/greedyalgorithms/JobSequencingTest.java)
             * [MergeIntervalsTest](https://github.com/TheAlgorithms/Java/blob/master/src/test/java/com/thealgorithms/greedyalgorithms/MergeIntervalsTest.java)
             * [MinimizingLatenessTest](https://github.com/TheAlgorithms/Java/blob/master/src/test/java/com/thealgorithms/greedyalgorithms/MinimizingLatenessTest.java)
+            * [OptimalFileMergingTest](https://github.com/TheAlgorithms/Java/blob/master/src/test/java/com/thealgorithms/greedyalgorithms/OptimalFileMergingTest.java)
           * io
             * [BufferedReaderTest](https://github.com/TheAlgorithms/Java/blob/master/src/test/java/com/thealgorithms/io/BufferedReaderTest.java)
           * lineclipping
